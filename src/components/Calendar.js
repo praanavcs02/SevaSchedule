@@ -7,7 +7,30 @@ import './Calendar.css';
 
 const localizer = momentLocalizer(moment);
 
-const events = [
+const values = [
+    {
+        day : "3",
+        endTime : "14",
+        fooditems : "Fruit",
+        month : "6",
+        name : "Pranav",
+        password : "asfasf",
+        startTime : "12"
+    },
+    {
+        day : "2",
+        endTime : "10",
+        fooditems : "Oatmeal",
+        month : "6",
+        name : "Bob",
+        password : "asfasf",
+        startTime : "12"
+    }
+]
+
+const events = values.map(returnDate);
+console.log(typeof events)
+/*[
   {
     title: 'Volunteer Event',
     start: new Date(2023, 6, 3, 10, 0),
@@ -17,9 +40,21 @@ const events = [
     title: 'Another Event',
     start: new Date(2023, 6, 2, 14, 0),
     end: new Date(2023, 6, 2, 16, 0),
-  },
+  }
   // Add more events here...
-];
+];*/
+
+
+
+function returnDate(item) {
+    return (
+        {
+            title : [item.name, item.fooditems].join(": "),
+            start: new Date(2023, item.month, item.day, item.startTime, 0, 0),
+            end: new Date(2023, item.month, item.day, item.endTime, 0, 0)
+        }
+    )
+}
 
 function Calendar() {
   return (
