@@ -5,7 +5,7 @@
     margin-top: 40px;
     margin-left: 40px;
     margin-right: 40px;
-    font-family: "Courier New", Courier, monospace;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-size: 16px;
     letter-spacing: 2px;
     word-spacing: 2px;
@@ -34,10 +34,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px;
+    padding: 20px;
     
 }
 
 .inline {
+    width: 1000px;
     padding-bottom: 30px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
 }

@@ -1,12 +1,29 @@
 import React from 'react';
 import './EditDay.css';
+import axios from 'axios';
 
 function EditDay() {
+
+  const axios = require('axios');
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData.entries());
-    
+    const send_data = Object.fromEntries(formData.entries());
+    axios({
+      method: "post",
+      url: "myurl",
+      data: send_data,
+      headers: { "Content-Type": "multipart/form-data" },
+    })
+      .then(function (response) {
+        //handle success
+        console.log(response);
+      })
+      .catch(function (response) {
+        //handle error
+        console.log(response);
+      });
   };
 
   return (

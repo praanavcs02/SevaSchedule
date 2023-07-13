@@ -35,13 +35,13 @@ function NavBar() {
               </li>
               <li className="nav-item">
                 <NavLink
-                  to="/about"
+                  to="/calendar"
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }
                   onClick={closeMobileMenu}
                 >
-                  About
+                  Calendar
                 </NavLink>
               </li>
               <li className="nav-item">

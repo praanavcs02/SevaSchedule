@@ -9,7 +9,7 @@ const localizer = momentLocalizer(moment);
 
 const values = [
     {
-        day : "3",
+        day : "13",
         endTime : "14",
         fooditems : "Fruit",
         month : "6",
@@ -18,7 +18,7 @@ const values = [
         startTime : "12"
     },
     {
-        day : "2",
+        day : "12",
         endTime : "10",
         fooditems : "Oatmeal",
         month : "6",
@@ -29,7 +29,7 @@ const values = [
 ]
 
 const events = values.map(returnDate);
-console.log(typeof events)
+
 /*[
   {
     title: 'Volunteer Event',
@@ -59,8 +59,8 @@ function returnDate(item) {
 function Calendar() {
   return (
     <div className="calendar-container">
-      <h1>Volunteer Calendar</h1>
-      <Link to="/editday">Edit 2023-07-01</Link>
+      <h1 className='heading'>Volunteer Calendar</h1>
+      <Link className="heading" to="/editday">Choose Date</Link>
       <Volunteer localizer={localizer} events={events} startAccessor="start" endAccessor="end" style={{ height: 500 }}/>
     </div>
   );

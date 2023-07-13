@@ -11,17 +11,21 @@ import NavBar from './components/NavBar';
 function App() {
   return (
     <BrowserRouter>
+    
     <NavBar></NavBar>
       <div className="app">
         
       <Routes>
-        <Route path="/" element={<Calendar />}></Route>
-        <Route path="/about" element={<About />}></Route>
+        <Route path="/" element={<About />}></Route>
+        <Route path="/calendar" element={<Calendar />}></Route>
         <Route path="/instructions" element={<Instructions />}></Route>
         <Route path="/editday" element={<EditDay />}></Route>
+        <Route path="*" element={<NoPage />} />
       </Routes>
       </div>
+      
     </BrowserRouter>
+    
   );
 }
 

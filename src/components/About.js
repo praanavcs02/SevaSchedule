@@ -6,8 +6,8 @@ function About() {
     return (
         <div className="header">
             
-            <h1 className='heading'>About</h1>
-            <Image source={require('../volunteer.jpg')}/>
+            <h1 className='heading'>Home</h1>
+            
             <div className='heading'>
                 <h2 className='inline'>
                     Members of Sarvalagu percussion center banded together to start an initiative to feed the homeless in areas around the Bay Area.
